@@ -12,7 +12,7 @@ const fonts = {
 const theme = extendTheme({
   colors: {
     brand: {
-      main: "#c1f377",
+      main: "#FFCB05",
       button: "#a5f88c",
       accent: "#a8f560",
       secondary: "#ffdf00",

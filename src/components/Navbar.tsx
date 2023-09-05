@@ -1,9 +1,10 @@
 import { Box, Button, Flex, Heading } from "@chakra-ui/react";
+import { BsGithub } from "react-icons/bs";
 
 const Navbar = () => {
   return (
     <Box
-      bg="rgba(193,243,119,0.7)"
+      bg="#FFCB05b3"
       px={4}
       backdropFilter={"blur(12px)"}
       m={"0px 10px 40px 10px"}
@@ -14,11 +15,12 @@ const Navbar = () => {
       py={3}
     >
       <Flex alignItems={"center"} justifyContent={"space-between"}>
-        <Heading>Pokédex</Heading>
+        <Heading>PokéSleek</Heading>
         <Button
-          variant={"solid"}
-          colorScheme={"green"}
-          
+          variant={"outline"}
+          colorScheme={"github"}
+          leftIcon={<BsGithub />}
+          color={"brown"}
           size={{ base: "sm", md: "md", lg: "md" }}
           mr={4}
         >

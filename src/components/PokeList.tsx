@@ -54,7 +54,7 @@ const glassBackground = {
   transition: "500ms ease-in-out",
   backdropFilter: "blur(12px)",
   background:
-    "linear-gradient(180deg, rgba(248, 249, 253, 0.4) 0%, rgba(193, 243, 119, 1) 100%)",
+    "linear-gradient(180deg, rgba(255, 255, 255, 0.0) 0%, rgba(255, 203, 5, 1) 100%)",
 };
 
 const fetchPokemons = async (
@@ -86,6 +86,7 @@ function PokemonList() {
   );
 
   const [pokemonDetails, setPokemonDetails] = useState<PokemonDetails[]>([]);
+  const [isLoadingDetails, setIsLoadingDetails] = useState(true); // Add a loading state for details
 
   useEffect(() => {
     const fetchDetails = async () => {
@@ -94,12 +95,15 @@ function PokemonList() {
           pokemons.map((pokemon) => fetchPokemonDetails(pokemon.url))
         );
         setPokemonDetails(details);
+        setIsLoadingDetails(false); // Set loading state to false when details are loaded
       }
     };
 
     fetchDetails();
   }, [pokemons]);
-  if (isLoading) {
+
+  if (isLoading || isLoadingDetails) {
+    // Show skeleton while loading both data and details
     return <SkeletonGrid />;
   }
 
@@ -108,13 +112,17 @@ function PokemonList() {
   }
 
   return (
-    <Box position={"relative"} mx={{ base: 5, md: "30px", lg: 50 }} mb={40}>
+    <Box
+      position={"relative"}
+      mx={{ base: 0, md: "30px", lg: 50, sm: 5 }}
+      mb={40}
+    >
       <Box
         // mx={{ base: -5, md: "-30", lg: -50 }}
         position={"absolute"}
         zIndex={0}
-        mx={{ base: -5, md: "-30px", lg: -50 }}
-        top={{ base: "-55px", md: "-50px", lg: "-1.8%" }}
+        mx={{ base: 0, md: "-30px", lg: -50, sm: -5 }}
+        top={{ base: "-40px", md: "-50px", lg: "-1.8%", sm: "-55px" }}
         overflow={"hidden"}
         maxW={"100dvw"}
       >
@@ -122,7 +130,7 @@ function PokemonList() {
           <Center>
             <Heading
               as={"h1"}
-              fontSize={{ lg: "96px", md: "64px", base: "64px" }}
+              fontSize={{ lg: "96px", md: "64px", base: "48px", sm: "64px" }}
               letterSpacing={"-2px"}
               fontWeight={600}
               m={0}

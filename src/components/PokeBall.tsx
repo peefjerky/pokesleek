@@ -4,6 +4,7 @@ import {
   Grid,
   GridItem,
   Heading,
+  Tooltip,
   Button,
   Skeleton,
 } from "@chakra-ui/react";
@@ -15,7 +16,12 @@ const PokeBall = () => {
       mt={10}
       mb={20}
       mx={10}
-      height={{ lg: "fit-content", md: "fit-content", sm: "60dvh" }}
+      height={{
+        lg: "fit-content",
+        md: "fit-content",
+        sm: "60dvh",
+        base: "60dvh",
+      }}
       marginBottom={"150px"}
     >
       <Grid
@@ -30,13 +36,13 @@ const PokeBall = () => {
           md: "repeat(1, 1fr)",
         }}
         gap={5}
-        height={{ lg: "50vh", md: "40vh", sm: "30vh" }}
+        height={{ lg: "100%", md: "100%", sm: "100%", base: "100%" }}
       >
         <GridItem>
           <Flex
             mx={"auto"}
-            h={"100%"}
-            w={"inherit"}
+            h={{ lg: "100%", md: "100%", sm: "30dvh", base: "30dvh" }}
+            w={"100%"}
             alignItems="center"
             justifyContent="center"
           >
@@ -49,17 +55,24 @@ const PokeBall = () => {
         <GridItem
           mx={20}
           my={"auto"}
-          textAlign={{ sm: "center", md: "start", lg: "start" }}
+          textAlign={{ sm: "center", md: "start", lg: "start", base: "center" }}
         >
           <Heading
-            size={{ lg: "4xl", md: "3xl", sm: "2xl" }}
+            size={{ lg: "4xl", md: "3xl", sm: "xl", base: "xl" }}
             mr={{ lg: 40, sm: 0, md: 0 }}
           >
             GOTTA CATCH 'EM ALL
           </Heading>
-          <Button colorScheme={"yellow"} variant={"solid"} mt={"30px"}>
-            Search
-          </Button>
+          <Tooltip label="Coming Soon" fontSize="md">
+            <Button
+              colorScheme={"yellow"}
+              variant={"solid"}
+              mt={"30px"}
+              isDisabled={true}
+            >
+              Search
+            </Button>
+          </Tooltip>
         </GridItem>
       </Grid>
     </Box>

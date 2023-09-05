@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Grid, GridItem, Skeleton } from "@chakra-ui/react";
 
 const glassBackground = {

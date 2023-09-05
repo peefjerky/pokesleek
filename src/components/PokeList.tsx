@@ -7,20 +7,14 @@ import {
   Grid,
   GridItem,
   Button,
-  Flex,
   Center,
   Circle,
-  IconButton,
   Heading,
   HStack,
-  LinkBox,
-  LinkOverlay,
 } from "@chakra-ui/react";
 import SkeletonGrid from "./utils/Skeleton";
 import ParallaxTextEffect from "./utils/ParallaxText";
 import {
-  BsArrowUpRightSquareFill,
-  BsFillCartPlusFill,
   BsFillArrowLeftSquareFill,
   BsFillArrowRightSquareFill,
 } from "react-icons/bs";

@@ -1,4 +1,4 @@
-import { Box, Center, Grid, GridItem, Skeleton } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Skeleton } from "@chakra-ui/react";
 
 const glassBackground = {
   transition: "500ms ease-in-out",

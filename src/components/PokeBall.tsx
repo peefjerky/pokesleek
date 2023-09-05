@@ -12,7 +12,13 @@ import React, { Suspense } from "react";
 const LazySplineScene = React.lazy(() => import("./utils/SplineScene"));
 const PokeBall = () => {
   return (
-    <Box mt={10} mb={20} mx={10} height={"fit-content"} marginBottom={"150px"}>
+    <Box
+      mt={10}
+      mb={20}
+      mx={10}
+      height={{ lg: "fit-content", md: "fit-content", sm: "60dvh" }}
+      marginBottom={"150px"}
+    >
       <Grid
         templateColumns={{
           sm: "repeat(1, 1fr)",

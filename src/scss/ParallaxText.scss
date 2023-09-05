@@ -1,0 +1,46 @@
+#ParallaxTextEffect {
+  /*   h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 100px 0 40px;
+  } */
+
+  /*   h1 {
+    font-size: 56px;
+    font-weight: 600;
+    letter-spacing: -3px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 100px 0;
+  } */
+
+  section {
+    position: relative;
+  }
+
+  .parallax {
+    overflow: hidden;
+    letter-spacing: -2px;
+    line-height: 0.8;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .parallax .scroller {
+    text-transform: capitalize;
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .parallax span {
+    display: block;
+    /*  margin-right: 0px; */
+  }
+}

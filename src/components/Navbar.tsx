@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Link } from "@chakra-ui/react";
 import { BsGithub } from "react-icons/bs";
 
 const Navbar = () => {
@@ -16,16 +16,18 @@ const Navbar = () => {
     >
       <Flex alignItems={"center"} justifyContent={"space-between"}>
         <Heading>PokéSleek</Heading>
-        <Button
-          variant={"outline"}
-          colorScheme={"github"}
-          leftIcon={<BsGithub />}
-          color={"brown"}
-          size={{ base: "sm", md: "md", lg: "md" }}
-          mr={4}
-        >
-          Github
-        </Button>
+        <Link href="https://github.com/peefjerky/pokesleek" isExternal>
+          <Button
+            variant={"outline"}
+            colorScheme={"github"}
+            leftIcon={<BsGithub />}
+            color={"brown"}
+            size={{ base: "sm", md: "md", lg: "md" }}
+            mr={4}
+          >
+            Github
+          </Button>
+        </Link>
       </Flex>
     </Box>
   );

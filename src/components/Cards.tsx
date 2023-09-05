@@ -119,7 +119,7 @@ const Cards: React.FC<CardsProps> = ({ pokemon }) => {
       <Box
         role={"group"}
         p={6}
-        maxW={{ lg: "330px", base: "260px" }}
+        maxW={{ lg: "330px", base: "300px" }}
         w={"full"}
         bg={useColorModeValue("white", "gray.800")}
         boxShadow={`8px 8px 24px -12px ${tagColor}`}

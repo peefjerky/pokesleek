@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Skeleton } from "@chakra-ui/react";
+import { Box, Center, Grid, GridItem, Skeleton } from "@chakra-ui/react";
 
 const glassBackground = {
   transition: "500ms ease-in-out",
@@ -15,7 +15,7 @@ const SkeletonGrid = () => {
       mx={{ base: 0, md: "30px", lg: 50, sm: 5 }}
       mb={40}
     >
-      <Box
+      {/* <Box
         position={"absolute"}
         zIndex={0}
         mx={{ base: 0, md: "-30px", lg: -50, sm: -5 }}
@@ -23,7 +23,7 @@ const SkeletonGrid = () => {
         overflow={"hidden"}
         maxW={"100dvw"}
       >
-        {/* <ParallaxTextEffect>
+        <ParallaxTextEffect>
             <Center>
               <Heading
                 as={"h1"}
@@ -36,8 +36,8 @@ const SkeletonGrid = () => {
               </Heading>
               <Circle size={"15px"} bg={"brand.main"} mx={"20px"} />
             </Center>
-          </ParallaxTextEffect> */}
-      </Box>
+          </ParallaxTextEffect>
+      </Box> */}
       <Box
         p={"50px"}
         bg={"brand.background"}
@@ -54,13 +54,18 @@ const SkeletonGrid = () => {
           }}
           gap={{ base: 5, md: 7, lg: 10 }}
           as="header"
-          mb={"150px"}
+          mb={"40px"}
           bg={""}
           height={"max-content"}
         >
           {skeletonData.map((_, index) => (
             <GridItem key={index}>
-              <Skeleton h={"530px"} maxW={"330px"} borderRadius={"12px"} />
+              <Skeleton
+                mx={"auto"}
+                h={"530px"}
+                maxW={{ lg: "330px", base: "300px" }}
+                borderRadius={"15px"}
+              />
             </GridItem>
           ))}
         </Grid>

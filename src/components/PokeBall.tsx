@@ -7,7 +7,6 @@ import {
   Button,
   Skeleton,
 } from "@chakra-ui/react";
-
 import React, { Suspense } from "react";
 const LazySplineScene = React.lazy(() => import("./utils/SplineScene"));
 const PokeBall = () => {

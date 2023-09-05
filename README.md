@@ -4,4 +4,4 @@ Discover Pokemon like never before with Pokesleek, your sleek and modern Pokedex
 
 📖 Browse, 📊 explore stats, 🚀 and experience speed like never before.
 
-[Visit Pokesleek](https://pokesleek.vercel.com)
+[Visit PokéSleek](https://pokesleek.vercel.com)
